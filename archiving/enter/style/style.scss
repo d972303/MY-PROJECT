@@ -1,0 +1,67 @@
+@font-face {
+  font-family: Happiness-Sans-Regular;
+  src: url('../../../webfont/Happiness-Sans-Regular.woff2');
+}
+
+@font-face {
+  font-family: Happiness-Sans-Bold;
+  src: url('../../../webfont/Happiness-Sans-Bold.woff2');
+}
+
+@font-face {
+  font-family: Happiness-Sans-Title;
+  src: url('../../../webfont/Happiness-Sans-Title.woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: aquamarine; //추후 삭제
+
+  & > a {
+    font-family: Happiness-Sans-Title;
+    font-size: 36px;
+    font-weight: 900;
+    color: black;
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline red wavy 4px;
+    }
+  }
+}
+
+.main {
+  padding: 12px;
+  background-color: blue; //추후삭제
+
+  &--cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열을 동일한 너비로 설정 */
+    gap: 20px; /* 카드들 사이의 간격 */
+    background-color: brown; //추후 삭제
+  }
+}
+
+.card {
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  text-align: center;
+
+  & > img {
+    max-width: 100%; /* 이미지를 카드의 너비에 맞추어 조정 */
+    height: auto; /* 이미지 비율을 유지하면서 높이를 자동으로 조정 */
+    margin-bottom: 10px; /* 이미지와 텍스트 사이의 간격 */
+  }
+
+  & > p {
+    text-align: center;
+  }
+}
