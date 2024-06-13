@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Happiness-Sans-Regular;
+  src: url('../../../webfont/Happiness-Sans-Regular.woff2');
+}
+
+@font-face {
+  font-family: Happiness-Sans-Bold;
+  src: url('../../../webfont/Happiness-Sans-Bold.woff2');
+}
+
+@font-face {
+  font-family: Happiness-Sans-Title;
+  src: url('../../../webfont/Happiness-Sans-Title.woff2');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Happiness-Sans-Regular;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: oklch(9400% 0.1 141deg);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 160px;
+  justify-content: space-between;
+  padding: 12px;
+  overflow-x: scroll;
+
+  // background-color: aquamarine; //추후 삭제
+
+  & a {
+    font-family: Happiness-Sans-Title;
+    font-size: 36px;
+    font-weight: 900;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline red wavy 4px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    gap: 80px;
+  }
+}
