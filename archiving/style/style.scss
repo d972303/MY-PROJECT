@@ -17,28 +17,12 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Happiness-Sans-Regular;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
-
 .nav {
   display: flex;
   gap: 24px;
   justify-content: space-between;
   padding: 12px;
-
-  // background-color: aquamarine; /s/추후 삭제
+  background-color: aquamarine; //추후 삭제
 
   & a {
     font-family: Happiness-Sans-Title;
@@ -53,69 +37,34 @@ p {
   }
 }
 
-.header {
-  display: flex;
-  justify-content: center;
+.main {
+  padding: 12px;
 
-  &__content {
-    & h1 {
-      font-family: Happiness-Sans-Bold;
-    }
+  // background-color: blue; //추후삭제
 
-    max-width: 900px;
-    text-align: center;
+  &--cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열을 동일한 너비로 설정 */
+    gap: 20px; /* 카드들 사이의 간격 */
+    // background-color: brown; //추후 삭제
   }
 }
 
-.main {
-  width: 100%;
-  padding: 24px;
-  font-family: Happiness-Sans-Regular;
+.card {
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  text-align: center;
+  background-color: aqua;
 
-  & ol {
-    padding: 0;
-    margin: 0;
-    list-style: none; /* 기본 리스트 스타일도 제거 */
+  & img {
+    max-width: 100%; /* 이미지를 카드의 너비에 맞추어 조정 */
+    height: 100%;
+    margin-bottom: 10px; /* 이미지와 텍스트 사이의 간격 */
+    object-fit: contain;
   }
 
-  & li {
-    padding: 10px 0;
-    margin: 0;
-    border-bottom: 1px solid black; /* 모든 리스트 아이템에 아래쪽 선 추가 */
-  }
-
-  &li:last-child {
-    border-bottom: none; /* 마지막 리스트 아이템의 아래쪽 선 제거 */
-  }
-
-  &--content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 32px;
-
-    &-number {
-      padding-block: 4px;
-      padding-inline: 12px;
-      font-size: 20px;
-      color: white;
-      background-color: red;
-      border-radius: 999px;
-    }
-
-    &-title {
-      font-size: 24px;
-    }
-
-    &-button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 32px;
-      transition: transform 0.3s ease; /* 회전 애니메이션 추가 */
-
-      &.rotate {
-        transform: rotate(45deg); /* 클릭시 90도 회전 */
-      }
-    }
+  & p {
+    text-align: center;
   }
 }
