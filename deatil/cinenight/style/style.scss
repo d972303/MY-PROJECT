@@ -38,7 +38,11 @@ p {
 }
 
 .section {
-  margin-bottom: 24px;
+  margin-top: 48px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .nav {
@@ -163,11 +167,11 @@ p {
   margin-inline: 32px;
 
   &__content {
-    > div {
-      margin-bottom: 20px;
-    }
-
     &-left {
+      > div {
+        margin-bottom: 24px;
+      }
+
       background-color: #fefff3;
     }
 
@@ -190,8 +194,19 @@ p {
     }
 
     &-right {
+      padding-inline: 24px;
+
       > * {
-        margin-bottom: 24px;
+        margin-bottom: 40px;
+      }
+
+      > ul {
+        padding: 0;
+        list-style: none;
+
+        > * {
+          margin-bottom: 4px;
+        }
       }
     }
   }

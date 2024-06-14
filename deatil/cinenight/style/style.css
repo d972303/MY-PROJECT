@@ -33,7 +33,10 @@ p {
 }
 
 .section {
-  margin-bottom: 24px;
+  margin-top: 48px;
+}
+.section:first-child {
+  margin-top: 0;
 }
 
 .nav {
@@ -136,11 +139,11 @@ p {
   gap: 24px;
   margin-inline: 32px;
 }
-.main__content > div {
-  margin-bottom: 20px;
-}
 .main__content-left {
   background-color: #fefff3;
+}
+.main__content-left > div {
+  margin-bottom: 24px;
 }
 .main__content-leftitem > img {
   display: block;
@@ -155,8 +158,18 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.main__content-right {
+  padding-inline: 24px;
+}
 .main__content-right > * {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
+}
+.main__content-right > ul {
+  padding: 0;
+  list-style: none;
+}
+.main__content-right > ul > * {
+  margin-bottom: 4px;
 }
 
 .highlight {
