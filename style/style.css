@@ -43,8 +43,9 @@ p {
   justify-content: space-between;
   padding: 24px;
   overflow-x: scroll;
+  scrollbar-width: none;
 }
-@media (width <= 960px) {
+@media (width <= 768px) {
   .nav {
     gap: 80px;
   }
@@ -55,25 +56,24 @@ p {
   color: black;
   text-decoration: none;
 }
-@media (width <= 430px) {
+@media (width <= 480px) {
   .nav a {
     font-size: 24px;
   }
 }
 .nav a:hover {
-  -webkit-text-decoration: underline #fefff3 wavy 3px;
-          text-decoration: underline #fefff3 wavy 3px;
+  color: #3fb02c;
 }
 .nav__left {
   display: flex;
   gap: 80px;
 }
-@media (width <= 960px) {
+@media (width <= 768px) {
   .nav__left {
     gap: 48px;
   }
 }
-@media (width <= 960px) {
+@media (width <= 768px) {
   .nav__left-text {
     display: none;
   }
@@ -81,7 +81,7 @@ p {
 .nav__left-icon {
   display: none;
 }
-@media (width <= 960px) {
+@media (width <= 768px) {
   .nav__left-icon {
     display: inline;
   }
@@ -94,7 +94,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3개의 열을 동일한 너비로 설정 */
   /* 카드들 사이의 간격 */
-  gap: 20px 12px;
+  gap: 40px 16px;
 }
 @media (width <= 768px) {
   .main--cards {
@@ -130,8 +130,9 @@ p {
 }
 .card--text-title {
   font-family: Happiness-Sans-Bold;
-  font-size: 14px;
+  font-size: 18px;
 }
 .card--text-subtitle {
-  font-size: 10px;
+  font-size: 14px;
+  color: gray;
 }

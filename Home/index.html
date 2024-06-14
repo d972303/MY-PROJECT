@@ -13,14 +13,14 @@
         <div class="nav__right">
           <a
             href="https://www.instagram.com/leedaxxeun?igsh=MWcyOTI4anBkM2Z1Yg%3D%3D&utm_source=qr"
-            >@leedaxxeun</a
+            ><h3>@leedaxxeun</h3></a
           >
         </div>
         <div class="nav__left">
-          <a class="nav__left-text" href="../About/index.html">About</a>
-          <a class="nav__left-icon" href="../About/index.html">A</a>
-          <a class="nav__left-text" href="../index.html">Enter</a>
-          <a class="nav__left-icon" href="../index.html">E</a>
+          <a class="nav__left-text" href="./About/index.html"><h3>About</h3></a>
+          <a class="nav__left-icon" href="./About/index.html"><h3>A</h3></a>
+          <a class="nav__left-text" href="../index.html"><h3>Enter</h3></a>
+          <a class="nav__left-icon" href="../index.html"><h3>E</h3></a>
         </div>
       </div>
     </div>
@@ -45,10 +45,16 @@
       <div class="container main">
         <ol>
           <li>
-            <div class="main--content">
+            <div class="main--content" onclick="rotateText()">
               <p class="main--content-number">2021</p>
               <p class="main--content-title">점프 - 점심 같이 먹기 프로젝트</p>
-              <p class="main--content-button" onclick="rotateText()">+</p>
+              <!-- <p class="main--content-togglebutton">+</p> -->
+              <!-- <button class="main--content-togglebutton">+</button> -->
+              <!-- 참고자료 -->
+              <button id="toggleButton">Show/Hide Content</button>
+              <div id="hiddenContent" class="hidden">
+                This content is initially hidden.
+              </div>
             </div>
           </li>
           <li>
