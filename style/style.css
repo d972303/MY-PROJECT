@@ -37,10 +37,32 @@ p {
   margin-bottom: 24px;
 }
 
+.clover {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100px; /* 이미지 크기 */
+  height: auto;
+  filter: invert(0%); /* 기본적으로 색상 변환 없음 */
+  animation: fall 5s forwards, colorChange 5s forwards;
+}
+
+@keyframes fall {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 100%;
+  }
+}
 .nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   display: flex;
   gap: 160px;
   justify-content: space-between;
+  width: 100%;
   padding: 24px;
   overflow-x: scroll;
   scrollbar-width: none;
