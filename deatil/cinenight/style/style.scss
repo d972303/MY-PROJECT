@@ -38,7 +38,7 @@ p {
 }
 
 .section {
-  margin-top: 48px;
+  margin-top: 24px;
 
   &:first-child {
     margin-top: 0;
@@ -116,19 +116,11 @@ p {
 
 .header {
   &__content {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    // gap: 4px;
-    // align-items: center;
-    // justify-content: center;
-    // padding-inline: 24px;
-    // list-style: none;
-
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    align-items: center; // 수직 중앙 정렬
-    justify-content: center; // 수평 중앙 정렬
+    align-items: center;
+    justify-content: center;
     padding-inline: 24px;
     margin-block: 0;
 
@@ -141,8 +133,8 @@ p {
       align-items: center;
       justify-content: center;
       height: 35px;
-      padding: 10px 20px;
-      font-size: 12px;
+      padding: 12px 20px;
+      font-size: 16px;
       line-height: 1.5;
       text-align: center;
       border-radius: 999px;
@@ -162,25 +154,53 @@ p {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 24px;
   margin-inline: 32px;
+  @media (width <= 780px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    .main__content-left {
+      order: 2;
+    }
+
+    .main__content-right {
+      order: 1;
+    }
+  }
+  @media (width <= 1080px) {
+    font-size: 16px;
+  }
 
   &__content {
     &-left {
       position: relative;
+      height: 1080px;
       overflow-y: scroll;
       background-color: #fefff3;
 
       > div {
-        margin-bottom: 48px;
+        margin-block: 60px;
       }
+
+      @media (width <= 780px) {
+        height: auto;
+        overflow-y: hidden;
+      }
+    }
+
+    &-poster {
+      display: block;
+      width: 40%;
+      margin: auto;
     }
 
     &-leftitem {
       > img {
         display: block;
-        max-width: 100%;
+        width: 100%;
         height: auto;
       }
     }
@@ -188,29 +208,36 @@ p {
     &-grid2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding-inline: 48px;
+      gap: 16px;
+      margin-inline: 120px;
     }
 
     &-grid3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-inline: 80px;
     }
 
-    &-right {
-      padding-inline: 24px;
+    &-gridrow {
+      display: grid;
+    }
+  }
+
+  &-right {
+    padding-inline: 24px;
+
+    > * {
+      margin-bottom: 40px;
+    }
+
+    > ul {
+      padding: 0;
+      list-style: none;
 
       > * {
-        margin-bottom: 40px;
-      }
-
-      > ul {
-        padding: 0;
-        list-style: none;
-
-        > * {
-          margin-bottom: 4px;
-          font-size: 16px;
-        }
+        margin-bottom: 4px;
+        font-size: 16px;
       }
     }
   }

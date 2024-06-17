@@ -22,7 +22,7 @@ body {
   font-family: Happiness-Sans-Regular;
   font-size: 18px;
   line-height: 1.5;
-  background-color: oklch(9400% 0.1 141deg);
+  background-color: #c3ffb9;
 }
 
 h1,
@@ -33,8 +33,13 @@ p {
   margin: 0;
 }
 
-.section {
-  margin-bottom: 24px;
+.section:nth-child(2) {
+  margin-top: 110px;
+}
+@media (width <= 480px) {
+  .section:nth-child(2) {
+    margin-top: 90px;
+  }
 }
 
 .clover {
@@ -46,7 +51,6 @@ p {
   filter: invert(0%); /* 기본적으로 색상 변환 없음 */
   animation: fall 5s forwards, colorChange 5s forwards;
 }
-
 @keyframes fall {
   from {
     top: -100px;
@@ -55,6 +59,7 @@ p {
     top: 100%;
   }
 }
+
 .nav {
   position: fixed;
   top: 0;
@@ -67,7 +72,7 @@ p {
   overflow-x: scroll;
   scrollbar-width: none;
 }
-@media (width <= 768px) {
+@media (width <= 1024px) {
   .nav {
     gap: 80px;
   }
@@ -90,12 +95,12 @@ p {
   display: flex;
   gap: 80px;
 }
-@media (width <= 768px) {
+@media (width <= 1024px) {
   .nav__left {
-    gap: 48px;
+    gap: 32px;
   }
 }
-@media (width <= 768px) {
+@media (width <= 1024px) {
   .nav__left-text {
     display: none;
   }
@@ -103,7 +108,7 @@ p {
 .nav__left-icon {
   display: none;
 }
-@media (width <= 768px) {
+@media (width <= 1024px) {
   .nav__left-icon {
     display: inline;
   }
@@ -111,6 +116,7 @@ p {
 
 .main {
   padding-inline: 12px;
+  margin-inline: 24px;
 }
 .main--cards {
   display: grid;
@@ -156,5 +162,13 @@ p {
 }
 .card--text-subtitle {
   font-size: 14px;
-  color: gray;
+  color: oklch(30% 0 0deg);
+}
+
+.footer {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.footer > p {
+  text-align: center;
 }
