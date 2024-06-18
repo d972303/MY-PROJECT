@@ -22,6 +22,7 @@
 }
 
 body {
+  height: 100vh;
   margin: 0;
   font-family: Happiness-Sans-Regular;
   font-size: 18px;
@@ -157,7 +158,7 @@ p {
 
 .main {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 24px;
 
   // margin-inline: 32px;
@@ -223,7 +224,7 @@ p {
   &__content {
     &-left {
       position: relative;
-      height: 1280px;
+      height: 100vh;
       overflow-y: scroll;
       background-color: #fefff3;
       border-right: 1px solid #282828;
