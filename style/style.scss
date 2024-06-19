@@ -39,29 +39,30 @@ p {
   margin: 0;
 }
 
-.section {
-  margin-bottom: 64px;
+// .section {
+//   margin-bottom: 64px;
 
-  &:nth-child(1) {
-    margin-bottom: 0;
-  }
+//   &:nth-child(1) {
+//     margin-bottom: 0;
+//   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
 
-  // &:nth-child(2) {
-  //   margin-top: 110px;
-  //   @media (width <= 480px) {
-  //     margin-top: 90px;
-  //   }
-  // }
-}
+//   // &:nth-child(2) {
+//   //   margin-top: 110px;
+//   //   @media (width <= 480px) {
+//   //     margin-top: 90px;
+//   //   }
+//   // }
+// }
 
 .clover {
   box-sizing: border-box;
   width: 100%;
   height: auto;
+  margin-block: 24px;
   overflow: hidden;
   white-space: nowrap;
   background-color: #fefff3;
@@ -238,9 +239,15 @@ p {
 }
 
 .header {
+  margin-bottom: 40px;
   background-color: #fefff3;
   border-top: 1px solid #282828;
   border-bottom: 1px solid #282828;
+
+  &__content {
+    padding: 48px;
+    text-align: center;
+  }
 
   > h1 {
     font-family: Happiness-Sans-Title;
@@ -253,6 +260,7 @@ p {
 
 .main {
   padding-inline: 12px;
+  margin-block: 40px;
   margin-inline: 24px;
 
   // background-color: lightblue; //추후삭제
@@ -326,7 +334,7 @@ p {
       font-size: 18px;
       text-align: center;
 
-      media (width <= 768px) {
+      @media (width <= 768px) {
         font-size: 14px;
       }
       @media (width <= 480px) {
