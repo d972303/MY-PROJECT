@@ -33,6 +33,27 @@ p {
   margin: 0;
 }
 
+.sidebar {
+  position: fixed;
+  top: 500px;
+  right: 0;
+  z-index: 999;
+}
+.sidebar__content {
+  margin: 24px;
+}
+.sidebar__content-inside {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 8px;
+  font-family: Happiness-Sans-Bold;
+}
+.sidebar__content-inside > img {
+  width: 30px;
+  height: 30px;
+}
+
 .clover {
   box-sizing: border-box;
   width: 100%;
@@ -49,7 +70,7 @@ p {
   animation: moveClover 20s linear infinite;
 }
 .clover__banner-img {
-  width: 30px; /* 클로버 크기 조정 */
+  width: 30px;
   height: 30px;
   margin-block: 7px 3px;
   margin-inline: 7px;
@@ -128,24 +149,38 @@ p {
 }
 
 .header {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  font-size: 18px;
   background-color: #fefff3;
-  border-top: 1px solid #282828;
   border-bottom: 1px solid #282828;
+}
+@media (width <= 480px) {
+  .header {
+    font-size: 16px;
+  }
 }
 .header__content {
   padding: 48px;
   text-align: center;
 }
-.header > h1 {
-  font-family: Happiness-Sans-Title;
+@media (width <= 480px) {
+  .header__content {
+    padding: 24px;
+  }
 }
-.header > p {
+.header__content-title {
+  margin-bottom: 24px;
+  font-family: Happiness-Sans-Title;
+  overflow-wrap: break-word;
+}
+.header__content-text {
   font-family: Happiness-Sans-regular;
+}
+.header__content-text:first-child {
+  margin-bottom: 8px;
 }
 
 .main {
-  padding-inline: 12px;
   margin-block: 40px;
   margin-inline: 24px;
 }
@@ -237,17 +272,21 @@ p {
 }
 .card--newicon {
   position: absolute;
-  top: -10;
-  left: 0;
+  top: -10px;
+  left: -10px;
   z-index: 999;
 }
 .card--newicon > img {
-  width: 70px;
+  width: 40px;
 }
 .card--newicon > p {
+  position: absolute;
+  top: 6px;
+  left: 13px;
+  z-index: 999;
   font-family: Happiness-Sans-Bold;
-  font-size: 24px;
-  color: #282828;
+  font-size: 18px;
+  color: #fefff3;
 }
 
 .footer {
